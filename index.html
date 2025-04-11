@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnostics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="img/png" href="https://res.cloudinary.com/dnrndkg5f/image/upload/v1744137576/medical-logo-png-0_rx3w2d.png">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://res.cloudinary.com/dnrndkg5f/image/upload/v1744137576/medical-logo-png-0_rx3w2d.png" alt="Logo" class="logo">
+                <h3>Medical AI</h3>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item active" data-page="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </li>
+                <li class="nav-item" data-page="dataset">
+                    <i class="fa-solid fa-database"></i>
+                    <span>Dataset</span>
+                </li>
+                <li class="nav-item" data-page="training">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Model Training</span>
+                </li>
+                <li class="nav-item" data-page="evaluation">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Evaluation</span>
+                </li>
+                <li class="nav-item" data-page="prediction">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Prediction</span>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="version">Version 2.0.0</div>
+                <div class="help-link" id="help-button">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>Help & Resources</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <section class="page active" id="home">
+                <div class="page-header">
+                    <div class="header-content">
+                        <img src="https://res.cloudinary.com/dnrndkg5f/image/upload/v1744137576/medical-logo-png-0_rx3w2d.png" class="header-icon">
+                        <div>
+                            <h1>Medical Diagnostics</h1>
+                            <p>Intelligent analysis of medical images for disease detection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>About This Platform</h3>
+                        <p>This platform uses advanced machine learning algorithms to analyze chest X-ray images 
+                        and predict the presence of pneumonia with high accuracy.</p>
+                        <p>Our system has been trained on thousands of labeled medical images and can provide 
+                        rapid analysis to assist healthcare professionals in their diagnostic process.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>How It Works</h3>
+                        <ol>
+                            <li>Upload or select a chest X-ray image</li>
+                            <li>Our AI model analyzes the image</li>
+                            <li>Review the prediction and probability scores</li>
+                            <li>Use the insights to support your clinical decision-making</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div class="feature-title">Dataset Exploration</div>
+                        <p>Visualize and understand the training data</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="feature-title">Model Training</div>
+                        <p>Train customized models with various algorithms</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="feature-title">Performance Evaluation</div>
+                        <p>Detailed metrics and visualizations</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="feature-title">Real-time Prediction</div>
+                        <p>Analyze new images with confidence scores</p>
+                    </div>
+                </div>
+
+                <h2>Sample Medical Images</h2>
+                <div class="sample-images">
+                    <div class="sample-card">
+                        <div class="sample-header normal">
+                            <h4>Normal Chest X-ray</h4>
+                        </div>
+                        <div class="sample-image">
+                            <img src="https://cdn.pixabay.com/photo/2020/09/08/15/20/x-ray-5555703_960_720.jpg" alt="Normal X-ray">
+                        </div>
+                        <div class="sample-info">
+                            <p><strong>Characteristics:</strong></p>
+                            <ul>
+                                <li>Clear lung fields</li>
+                                <li>No visible consolidation</li>
+                                <li>Normal cardiac silhouette</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sample-card">
+                        <div class="sample-header pneumonia">
+                            <h4>Pneumonia Chest X-ray</h4>
+                        </div>
+                        <div class="sample-image">
+                            <img src="https://media.sciencephoto.com/image/c0520823/800wm/C0520823-Pneumonia,_chest_X-ray.jpg" alt="Pneumonia X-ray">
+                        </div>
+                        <div class="sample-info">
+                            <p><strong>Characteristics:</strong></p>
+                            <ul>
+                                <li>Areas of opacity</li>
+                                <li>Infiltrates in lung fields</li>
+                                <li>Potential reduced lung volume</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> This platform is designed to assist healthcare professionals and is not 
+                    intended to replace professional medical diagnosis. Always consult with qualified medical personnel 
+                    for proper diagnosis and treatment.</p>
+                </div>
+            </section>
+
+            <!-- Dataset Page -->
+            <section class="page" id="dataset">
+                <div class="page-header">
+                    <h1>Dataset Management</h1>
+                </div>
+
+                <div class="tabs">
+                    <div class="tab active" data-tab="load-dataset">Load Dataset</div>
+                    <div class="tab" data-tab="explore-dataset">Explore Dataset</div>
+                </div>
+
+                <div class="tab-content active" id="load-dataset">
+                    <div class="card">
+                        <h3>Chest X-ray Dataset</h3>
+                        <div class="dataset-info">
+                            <h4>Dataset Information</h4>
+                            <p>This application uses the Chest X-Ray Images (Pneumonia) dataset, which contains labeled 
+                            chest X-ray images of patients with and without pneumonia.</p>
+                            
+                            <p><strong>Classes:</strong></p>
+                            <ul>
+                                <li><span class="highlight">Normal</span>: X-rays from healthy patients</li>
+                                <li><span class="highlight">Pneumonia</span>: X-rays showing signs of pneumonia</li>
+                            </ul>
+                            
+                            <p><strong>Image Characteristics:</strong></p>
+                            <ul>
+                                <li>Grayscale chest X-ray images</li>
+                                <li>Standardized to 150×150 pixels</li>
+                                <li>Divided into training, validation, and test sets</li>
+                            </ul>
+                        </div>
+
+                        <div class="dataset-actions">
+                            <button class="primary-button" id="load-dataset-btn">
+                                <i class="fa-solid fa-download"></i> Load Dataset
+                            </button>
+                            
+                            <div class="dataset-status not-loaded">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Dataset Status: Not loaded</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="explore-dataset">
+                    <div class="dataset-warning">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>Please load the dataset first from the 'Load Dataset' tab.</span>
+                    </div>
+
+                    <div class="dataset-content" style="display: none;">
+                        <h3>Dataset Overview</h3>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Classes</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">5,856</div>
+                                <div class="stat-label">Total Images</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">150×150</div>
+                                <div class="stat-label">Image Size</div>
+                            </div>
+                        </div>
+
+                        <h3>Class Distribution</h3>
+                        <div class="chart-container">
+                            <canvas id="class-distribution-chart"></canvas>
+                        </div>
+
+                        <h3>Sample Images</h3>
+                        <div class="sample-images-grid">
+                            <div class="sample-image-card normal">
+                                <img src="https://via.placeholder.com/150" alt="Normal X-ray">
+                                <div class="sample-label">Normal</div>
+                            </div>
+                            <div class="sample-image-card normal">
+                                <img src="https://via.placeholder.com/150" alt="Normal X-ray">
+                                <div class="sample-label">Normal</div>
+                            </div>
+                            <div class="sample-image-card pneumonia">
+                                <img src="https://via.placeholder.com/150" alt="Pneumonia X-ray">
+                                <div class="sample-label">Pneumonia</div>
+                            </div>
+                            <div class="sample-image-card pneumonia">
+                                <img src="https://via.placeholder.com/150" alt="Pneumonia X-ray">
+                                <div class="sample-label">Pneumonia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Model Training Page -->
+            <section class="page" id="training">
+                <div class="page-header">
+                    <h1>Model Training</h1>
+                </div>
+
+                <div class="dataset-warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>Please load the dataset first from the Dataset page.</span>
+                </div>
+
+                <div class="training-content" style="display: none;">
+                    <div class="training-grid">
+                        <div class="training-main">
+                            <div class="card">
+                                <h3>Train a New Model</h3>
+                                <p>Configure and train a machine learning model to classify chest X-rays.</p>
+
+                                <div class="model-config">
+                                    <div class="form-group">
+                                        <label>Model Architecture</label>
+                                        <select id="model-type">
+                                            <option value="random-forest">Random Forest (Best for general cases)</option>
+                                            <option value="svm">Support Vector Machine (Best for binary classification)</option>
+                                            <option value="gradient-boosting">Gradient Boosting (Best for complex patterns)</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="model-description">
+                                        <div class="model-description-content random-forest">
+                                            <h4>Random Forest</h4>
+                                            <p>Builds multiple decision trees and merges their predictions.</p>
+                                            <ul>
+                                                <li><strong>Strengths:</strong> Robust to overfitting, handles non-linear data well</li>
+                                                <li><strong>Best for:</strong> General classification tasks with moderate dataset size</li>
+                                                <li><strong>Features:</strong> Feature importance ranking, handles missing values</li>
+                                            </ul>
+                                        </div>
+                                        <div class="model-description-content svm" style="display: none;">
+                                            <h4>Support Vector Machine</h4>
+                                            <p>Finds the optimal hyperplane that separates classes.</p>
+                                            <ul>
+                                                <li><strong>Strengths:</strong> Effective in high dimensional spaces, memory efficient</li>
+                                                <li><strong>Best for:</strong> Binary classification with clear margins</li>
+                                                <li><strong>Features:</strong> Kernel tricks for non-linear boundaries, margin control</li>
+                                            </ul>
+                                        </div>
+                                        <div class="model-description-content gradient-boosting" style="display: none;">
+                                            <h4>Gradient Boosting</h4>
+                                            <p>Builds trees sequentially, each correcting errors of the previous ones.</p>
+                                            <ul>
+                                                <li><strong>Strengths:</strong> High performance, handles mixed data types</li>
+                                                <li><strong>Best for:</strong> Complex patterns and relationships in data</li>
+                                                <li><strong>Features:</strong> Handles interactions automatically, robust to outliers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Training Epochs</label>
+                                            <input type="range" id="epochs" min="1" max="20" value="5" class="slider">
+                                            <div class="slider-value">5</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Batch Size</label>
+                                            <select id="batch-size">
+                                                <option value="16">16</option>
+                                                <option value="32" selected>32</option>
+                                                <option value="64">64</option>
+                                                <option value="128">128</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion">
+                                        <div class="accordion-header">
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            Advanced Options
+                                        </div>
+                                        <div class="accordion-content">
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label>Learning Rate</label>
+                                                    <select id="learning-rate">
+                                                        <option value="0.0001">0.0001</option>
+                                                        <option value="0.0005">0.0005</option>
+                                                        <option value="0.001" selected>0.001</option>
+                                                        <option value="0.005">0.005</option>
+                                                        <option value="0.01">0.01</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Dropout Rate</label>
+                                                    <input type="range" id="dropout" min="0" max="0.5" step="0.1" value="0.2" class="slider">
+                                                    <div class="slider-value">0.2</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button class="primary-button" id="train-model-btn">
+                                            <i class="fa-solid fa-rocket"></i> Train Model
+                                        </button>
+                                    </div>
+
+                                    <div class="training-progress" style="display: none;">
+                                        <h4>Training Progress</h4>
+                                        <div class="progress-container">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                        <div class="progress-status">Preparing model for training...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="training-sidebar">
+                            <div class="card">
+                                <h3>Pre-trained Model</h3>
+                                <p>Alternatively, you can use a pre-trained model that has been trained on a large dataset of chest X-rays.</p>
+                                
+                                <div class="pretrained-info">
+                                    <h4>About Pre-trained Model</h4>
+                                    <p>Our pre-trained model was trained on thousands of verified chest X-ray images and achieved:</p>
+                                    <ul>
+                                        <li>Accuracy: ~90%</li>
+                                        <li>Sensitivity: ~87%</li>
+                                        <li>Specificity: ~93%</li>
+                                    </ul>
+                                    <p>Perfect for quick testing or when you don't have time to train a new model.</p>
+                                </div>
+
+                                <button class="secondary-button" id="load-pretrained-btn">
+                                    <i class="fa-solid fa-download"></i> Load Pre-trained Model
+                                </button>
+                            </div>
+
+                            <div class="model-status not-loaded">
+                                <i class="fa-solid fa-circle-exclamation"></i>
+                                <span>Model Status: No model loaded</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Evaluation Page -->
+            <section class="page" id="evaluation">
+                <div class="page-header">
+                    <h1>Model Evaluation & Analytics</h1>
+                </div>
+
+                <div class="model-warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>Please train a model first or load a pre-trained model.</span>
+                </div>
+
+                <div class="evaluation-content" style="display: none;">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="perf-metrics">Performance Metrics</div>
+                        <div class="tab" data-tab="visualizations">Visualizations</div>
+                    </div>
+
+                    <div class="tab-content active" id="perf-metrics">
+                        <div class="card">
+                            <h3>Model Performance Metrics</h3>
+                            <p>Evaluate the trained model on the test dataset to assess its performance.</p>
+
+                            <button class="primary-button" id="evaluate-model-btn">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i> Evaluate Model on Test Data
+                            </button>
+
+                            <div class="evaluation-results" style="display: none;">
+                                <h3>Test Set Performance</h3>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="accuracy-value">0.00%</div>
+                                        <div class="metric-label">Accuracy</div>
+                                        <div class="metric-desc">Overall correct predictions</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="precision-value">0.00%</div>
+                                        <div class="metric-label">Precision</div>
+                                        <div class="metric-desc">True positives / predicted positives</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="recall-value">0.00%</div>
+                                        <div class="metric-label">Recall</div>
+                                        <div class="metric-desc">True positives / actual positives</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="f1-value">0.00%</div>
+                                        <div class="metric-label">F1 Score</div>
+                                        <div class="metric-desc">Harmonic mean of precision and recall</div>
+                                    </div>
+                                </div>
+
+                                <h3>Confusion Matrix</h3>
+                                <div class="accordion">
+                                    <div class="accordion-header">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        What is a Confusion Matrix?
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>A confusion matrix shows the counts of correct and incorrect predictions for each class:</p>
+                                        <ul>
+                                            <li><strong>True Positives (TP):</strong> Correctly predicted pneumonia cases</li>
+                                            <li><strong>True Negatives (TN):</strong> Correctly predicted normal cases</li>
+                                            <li><strong>False Positives (FP):</strong> Normal cases wrongly predicted as pneumonia</li>
+                                            <li><strong>False Negatives (FN):</strong> Pneumonia cases wrongly predicted as normal</li>
+                                        </ul>
+                                        <p>The matrix helps identify which types of errors the model tends to make.</p>
+                                    </div>
+                                </div>
+
+                                <div class="confusion-matrix-container">
+                                    <canvas id="confusion-matrix-chart"></canvas>
+                                </div>
+
+                                <h3>Model Performance Insights</h3>
+                                <div class="metrics-grid">
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="sensitivity-value">0.00%</div>
+                                        <div class="metric-label">Sensitivity</div>
+                                        <div class="metric-desc">Ability to detect pneumonia cases</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="specificity-value">0.00%</div>
+                                        <div class="metric-label">Specificity</div>
+                                        <div class="metric-desc">Ability to correctly identify normal cases</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="ppv-value">0.00%</div>
+                                        <div class="metric-label">Positive Predictive Value</div>
+                                        <div class="metric-desc">Probability that positive predictions are correct</div>
+                                    </div>
+                                    <div class="metric-card">
+                                        <div class="metric-value" id="npv-value">0.00%</div>
+                                        <div class="metric-label">Negative Predictive Value</div>
+                                        <div class="metric-desc">Probability that negative predictions are correct</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="visualizations">
+                        <div class="card">
+                            <h3>Performance Visualizations</h3>
+                            <p>Visual representations of model performance metrics and training history.</p>
+
+                            <div class="visualization-section">
+                                <h3>Training History</h3>
+                                <div class="accordion">
+                                    <div class="accordion-header">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Understanding Training Curves
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p><strong>Learning Curves</strong> show how the model's performance changes during training:</p>
+                                        <ul>
+                                            <li><strong>Loss curves:</strong> Show how well the model is learning. Lower is better.</li>
+                                            <li><strong>Accuracy curves:</strong> Show prediction accuracy. Higher is better.</li>
+                                        </ul>
+                                        <p><strong>What to look for:</strong></p>
+                                        <ul>
+                                            <li><strong>Overfitting:</strong> If validation metrics are much worse than training metrics</li>
+                                            <li><strong>Underfitting:</strong> If both metrics are poor and not improving</li>
+                                            <li><strong>Good fit:</strong> Both metrics are good and close to each other</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="chart-container">
+                                    <canvas id="training-history-chart"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="visualization-section">
+                                <h3>ROC Curve</h3>
+                                <div class="accordion">
+                                    <div class="accordion-header">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        What is an ROC Curve?
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>The <strong>Receiver Operating Characteristic (ROC) curve</strong> plots the True Positive Rate against 
+                                        the False Positive Rate at different classification thresholds.</p>
+                                        <ul>
+                                            <li><strong>AUC (Area Under Curve):</strong> Measures the model's ability to distinguish between classes
+                                                <ul>
+                                                    <li>AUC = 1.0: Perfect classifier</li>
+                                                    <li>AUC = 0.5: No better than random guessing</li>
+                                                    <li>AUC > 0.8: Generally considered good performance</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p>A higher AUC indicates better model performance.</p>
+                                    </div>
+                                </div>
+
+                                <div class="chart-container">
+                                    <canvas id="roc-curve-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prediction Page -->
+            <section class="page" id="prediction">
+                <div class="page-header">
+                    <h1>Pneumonia Prediction Analysis</h1>
+                </div>
+
+                <div class="model-warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>Please train a model first or load a pre-trained model.</span>
+                </div>
+
+                <div class="prediction-content" style="display: none;">
+                    <div class="card">
+                        <h3>Upload X-ray for Analysis</h3>
+                        <p>Upload a chest X-ray image to analyze it for signs of pneumonia. The model will predict 
+                        whether the image shows signs of pneumonia and provide a confidence score.</p>
+                    </div>
+
+                    <div class="upload-container">
+                        <div class="upload-area">
+                            <div class="upload-box" id="upload-box">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <p>Drag & drop your X-ray image here</p>
+                                <p>or</p>
+                                <label for="file-upload" class="file-upload-btn">Browse Files</label>
+                                <input type="file" id="file-upload" accept="image/jpeg,image/png,image/jpg" hidden>
+                            </div>
+                        </div>
+                        <div class="sample-option">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="use-sample">
+                                <span class="checkmark"></span>
+                                Or use a sample image
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="preview-container" style="display: none;">
+                        <div class="preview-header">
+                            <h3>Uploaded X-ray Image</h3>
+                        </div>
+                        <div class="preview-image">
+                            <img id="preview-img" src="#" alt="X-ray preview">
+                        </div>
+                        <div class="preview-actions">
+                            <button class="secondary-button" id="cancel-preview-btn">
+                                <i class="fa-solid fa-xmark"></i> Cancel
+                            </button>
+                            <button class="primary-button" id="analyze-btn">
+                                <i class="fa-solid fa-magnifying-glass"></i> Analyze Image
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="analysis-results" style="display: none;">
+                        <h2 class="results-heading">Analysis Results</h2>
+                        
+                        <div class="results-header" id="results-header">
+                            <h2 id="prediction-result">Normal</h2>
+                        </div>
+                        
+                        <div class="results-body" id="results-body">
+                            <div class="results-grid">
+                                <div class="results-main">
+                                    <h4>Confidence: <span id="confidence-value">0.00%</span></h4>
+                                    <div class="confidence-bar-container">
+                                        <div class="confidence-bar" id="confidence-bar"></div>
+                                    </div>
+                                    <p id="confidence-text">Model certainty: Low Confidence</p>
+                                    
+                                    <div id="actual-label-container" style="display: none;">
+                                        <p>Actual label: <strong id="actual-label">Normal</strong></p>
+                                        <p>Prediction <span id="match-text">Matches</span> actual label</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="results-chart">
+                                    <h4>Class Probability Distribution</h4>
+                                    <div class="chart-container">
+                                        <canvas id="probability-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-details">
+                            <h3>Analysis Details</h3>
+                            
+                            <div class="analysis-findings" id="analysis-findings">
+                                <!-- Content will be populated by JavaScript based on prediction -->
+                            </div>
+                            
+                            <div class="disclaimer">
+                                <p><strong>Disclaimer:</strong> This tool is for educational and research purposes only. 
+                                It should not be used as a substitute for professional medical advice, diagnosis, or treatment.
+                                Always seek the advice of a qualified healthcare provider with any questions 
+                                regarding a medical condition.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="examples-container">
+                        <h3>Example X-rays for Reference</h3>
+                        
+                        <div class="sample-images">
+                            <div class="sample-card">
+                                <div class="sample-header normal">
+                                    <h4>Normal Chest X-ray</h4>
+                                </div>
+                                <div class="sample-image">
+                                    <img src="https://cdn.pixabay.com/photo/2020/09/08/15/20/x-ray-5555703_960_720.jpg" alt="Normal X-ray">
+                                </div>
+                                <div class="sample-info">
+                                    <p><strong>Characteristics:</strong></p>
+                                    <ul>
+                                        <li>Clear lung fields</li>
+                                        <li>No visible consolidation</li>
+                                        <li>Normal cardiac silhouette</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="sample-card">
+                                <div class="sample-header pneumonia">
+                                    <h4>Pneumonia Chest X-ray</h4>
+                                </div>
+                                <div class="sample-image">
+                                    <img src="https://media.sciencephoto.com/image/c0520823/800wm/C0520823-Pneumonia,_chest_X-ray.jpg" alt="Pneumonia X-ray">
+                                </div>
+                                <div class="sample-info">
+                                    <p><strong>Characteristics:</strong></p>
+                                    <ul>
+                                        <li>Areas of opacity</li>
+                                        <li>Infiltrates in lung fields</li>
+                                        <li>Potential reduced lung volume</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion">
+                            <div class="accordion-header">
+                                <i class="fa-solid fa-caret-right"></i>
+                                Tips for better results
+                            </div>
+                            <div class="accordion-content">
+                                <h4>Tips for Better Results</h4>
+                                
+                                <p><strong>Image Quality:</strong></p>
+                                <ul>
+                                    <li>Use high-resolution X-ray images</li>
+                                    <li>Ensure proper positioning and exposure</li>
+                                    <li>Avoid cropped or partial X-rays</li>
+                                </ul>
+                                
+                                <p><strong>Image Format:</strong></p>
+                                <ul>
+                                    <li>JPEG or PNG formats work best</li>
+                                    <li>Standard posteroanterior (PA) views preferred</li>
+                                    <li>Avoid images with annotations or markings when possible</li>
+                                </ul>
+                                
+                                <p><strong>Considerations:</strong></p>
+                                <ul>
+                                    <li>The model analyzes chest X-rays specifically for pneumonia</li>
+                                    <li>It may not properly analyze other conditions or image types</li>
+                                    <li>Always consult with a healthcare professional for diagnosis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal" id="help-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Help & Resources</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h3>User Guide</h3>
+                    <p>Learn how to use this platform effectively:</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-book"></i> User Manual</a></li>
+                        <li><a href="#"><i class="fa-solid fa-video"></i> Video Tutorials</a></li>
+                        <li><a href="#"><i class="fa-solid fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h3>Medical Imaging Resources</h3>
+                    <p>Educational materials on medical imaging:</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-lungs"></i> Understanding Chest X-rays</a></li>
+                        <li><a href="#"><i class="fa-solid fa-virus"></i> Pneumonia Detection Guide</a></li>
+                        <li><a href="#"><i class="fa-solid fa-hospital"></i> Clinical References</a></li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h3>Technical Documentation</h3>
+                    <p>Technical details about models and algorithms:</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-code"></i> API Documentation</a></li>
+                        <li><a href="#"><i class="fa-solid fa-brain"></i> Model Architecture</a></li>
+                        <li><a href="#"><i class="fa-solid fa-flask"></i> Research Papers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h3>Contact Support</h3>
+                    <p>Need additional help? Contact our support team:</p>
+                    <ul>
+                        <li><a href="mailto:support@medicalai.example.com"><i class="fa-solid fa-envelope"></i> support@medicalai.example.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-comment"></i> Live Chat (9 AM - 5 PM EST)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="secondary-button close-modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loading-text">Processing...</div>
+    </div>
+
+    <footer class="footer">
+        <p>AI Medical Diagnostics Platform v2.0 | Developed for Healthcare Professionals</p>
+        <p>&copy; 2025 Medical AI Research Group | <a href="mailto:support@medicalai.example.com">support@medicalai.example.com</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
